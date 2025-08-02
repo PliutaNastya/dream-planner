@@ -1,0 +1,80 @@
+// Центрування (flex-центр)
+%center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Центрування (по горизонталі)
+%center-x {
+	display: flex;
+	justify-content: center;
+}
+
+// Центрування (по вертикалі)
+%center-y {
+	display: flex;
+	align-items: center;
+}
+
+// Обгортка для зображень - object-fit: contain
+%img-contain {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+// Обгортка для зображень - object-fit: cover
+%img-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// Приховати елемент
+%hidden {
+	display: none;
+}
+
+// Текст з трьома крапками (ellipsis)
+%text-ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+// Reset для списків
+%list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// Clearfix
+%clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Повноекранний блок
+%full-screen {
+	width: 100vw;
+	min-height: 100vh;
+}
+
+// Абсолютне центроване позиціонування
+%abs-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// Square контейнер
+%square {
+	aspect-ratio: 1 / 1;
+	width: 100%;
+}

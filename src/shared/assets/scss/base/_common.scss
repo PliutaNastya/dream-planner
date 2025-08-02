@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/extends" as *;
+
+// ============================================
+/* Chrome, Edge, Safari */
+.scrollable {
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-accent) var(--color-light-gray);
+}
+/* Webkit (Chrome, Safari) */
+.scrollable::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+	background-color: var(--color-accent);
+	border-radius: 4px;
+	border: none;
+}
+.scrollable::-webkit-scrollbar-track {
+	background: var(--color-light-gray);
+}
+.scrollable::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-accent);
+}

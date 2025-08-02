@@ -1,0 +1,18 @@
+@use 'sass:math';
+// convert to Rem
+@function rem($px, $base: 16) {
+	@return (math.div($px, $base) * 1rem);
+}
+//  convert to Em
+@function em($px, $base: 16) {
+	@return (math.div($px, $base) * 1em);
+}
+//  golden-ratio
+@function golden-ratio($value, $inverse: false) {
+	$phi: 1.618;
+	@if $inverse {
+		@return $value / $phi;
+	} @else {
+		@return $value * $phi;
+	}
+}

@@ -1,0 +1,45 @@
+@media (min-width: 767.98px) {
+	.menu-icon {
+		display: none;
+	}
+}
+.menu-icon {
+	width: 30px;
+	height: 18px;
+	position: relative;
+	cursor: pointer;
+	border: none;
+	background: transparent;
+}
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+	content: "";
+	position: absolute;
+	height: 1.3px;
+	width: 100%;
+	background-color: #000;
+	transition: all 0.3s ease;
+	left: 0;
+}
+.menu-icon span {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.menu-icon span::before {
+	top: -8px;
+}
+.menu-icon span::after {
+	bottom: -8px;
+}
+.menu-icon.active span {
+	background: transparent;
+}
+.menu-icon.active span::before {
+	transform: rotate(45deg);
+	top: 0;
+}
+.menu-icon.active span::after {
+	transform: rotate(-45deg);
+	bottom: 0;
+}
