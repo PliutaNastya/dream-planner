@@ -122,28 +122,3 @@ src
         └── ui
             └── SearchPanel.jsx
 </pre>
-
----
-
-## Як запустити
-
-1. Склонуй репозиторій:
-git clone https://github.com/your-username/dream-planner.git
-cd dream-planner
-
-2. Встанови залежності:
-npm install
-
-3. Створи Firebase-проєкт, увімкни Firestore. Потім:
-Скопіюй свої ключі Firebase у файл src/.env
-export const firebaseConfig = {
-  apiKey: "...",
-  authDomain: "...",
-  projectId: "...",
-  storageBucket: "...",
-  messagingSenderId: "...",
-  appId: "..."
-}
-
-4. Запусти застосунок:
-npm run dev
