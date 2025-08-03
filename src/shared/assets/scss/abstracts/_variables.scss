@@ -1,4 +1,44 @@
+:root[data-theme="light"] {
+	--main-bg-color: #f3e9dc;
+	--secondary-bg-color: #fff;
+	--actions-bg-color: #2c5f4a;
+	--actions-hover-bg-color: #1d4735;
+	--banner-bg-color: #f4d6c6;
+	--toggle-bg-color: #c8bdaf;
 
-:root {
-	
+	--main-text-color: #000;
+	--inverse-text-color: #e2e2e2;
+	--inverse-opacity-text-color: rgba(226, 226, 226, 0.5);
+
+	--border-color: #d6cce0;
+	--accent-color: #f6c744;
+
+	--fz-main: max(14px, 1vw);
+	--fz-middle: max(16px, 1.5vw);
+	--fz-big: max(28px, 3vw);
+
+	--gap: max(15px, 1.5vw);
+	--gap-big: max(15px, 3vw);
+}
+:root[data-theme="dark"] {
+	--main-bg-color: #1e1e1e;
+	--secondary-bg-color: #2c2c2c;
+	--actions-bg-color: #88bfb7;
+	--actions-hover-bg-color: #9dd4ca;
+	--banner-bg-color: #3a2e39;
+	--toggle-bg-color: #1e1e1e;
+
+	--main-text-color: #f3e9dc;
+	--inverse-text-color: #424242;
+	--inverse-opacity-text-color: rgba(66, 66, 66, 0.5);
+
+	--border-color: #444054;
+	--accent-color: #f6c744;
+
+	--fz-main: max(14px, 1vw);
+	--fz-middle: max(16px, 1.5vw);
+	--fz-big: max(20px, 2vw);
+
+	--gap: max(15px, 1.5vw);
+	--gap-big: max(15px, 3vw);
 }

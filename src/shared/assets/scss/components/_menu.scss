@@ -1,45 +1,72 @@
-@media (min-width: 767.98px) {
-	.menu-icon {
-		display: none;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+
+nav {
+	&:not(:last-child) {
+		margin-block-end: var(--gap);
 	}
 }
-.menu-icon {
-	width: 30px;
-	height: 18px;
+.menu-list {
+	display: grid;
+	margin-inline-start: rem(15);
+	row-gap: var(--gap);
+
+	@media (max-width: em(767.98)) {
+		margin-inline-start: rem(8);
+	}
+}
+.menu-item {
+}
+.menu-link {
 	position: relative;
-	cursor: pointer;
-	border: none;
-	background: transparent;
-}
-.menu-icon span,
-.menu-icon span::before,
-.menu-icon span::after {
-	content: "";
-	position: absolute;
-	height: 1.3px;
-	width: 100%;
-	background-color: #000;
-	transition: all 0.3s ease;
-	left: 0;
-}
-.menu-icon span {
-	top: 50%;
-	transform: translateY(-50%);
-}
-.menu-icon span::before {
-	top: -8px;
-}
-.menu-icon span::after {
-	bottom: -8px;
-}
-.menu-icon.active span {
-	background: transparent;
-}
-.menu-icon.active span::before {
-	transform: rotate(45deg);
-	top: 0;
-}
-.menu-icon.active span::after {
-	transform: rotate(-45deg);
-	bottom: 0;
+	display: flex;
+	align-items: center;
+	column-gap: var(--gap);
+	line-height: 1.3;
+	border-radius: rem(20) 0 0 rem(20);
+
+	@include clamp('padding-inline', 15px, 3vw, 1.5vw);
+	@include clamp('padding-block', 25px, 3vw, 1.5vw);
+
+	svg {
+		flex-shrink: 0;
+	}
+
+	@media (max-width: em(767.98)) {
+		border-radius: rem(10) 0 0 rem(10);
+		span {
+			display: none;
+		}
+	}
+
+	&.active {
+		background-color: var(--main-bg-color);
+
+		&::before,
+		&::after {
+			--border-radius: 2rem;
+
+			content: "";
+			position: absolute;
+			width: var(--border-radius);
+			height: var(--border-radius);
+			right: 0;
+			border-radius: 50%;
+			pointer-events: none;
+		}
+
+		&::before {
+			top: calc(var(--border-radius) * -1);
+			box-shadow: 10px 10px 0 10px var(--main-bg-color);
+			border-radius: 0 0 50% 0;
+		}
+
+		&::after {
+			bottom: calc(var(--border-radius) * -1);
+			box-shadow: 10px -10px 0 10px var(--main-bg-color);
+			border-radius: 0 50% 0 0;
+		}
+	}
 }

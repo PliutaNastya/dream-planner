@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/extends" as *;
+
+.home {
+	@include clamp("padding", 15px, 3vw, 50px);
+	min-height: 100svh;
+	display: grid;
+	place-content: center;
+
+	@media (min-width: em(992)) {
+		grid-template-columns: minmax(min-content, rem(400)) minmax(rem(250), 1fr);
+	}
+}
+.home-content {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	display: grid;
+	row-gap: var(--gap);
+
+	@media (max-width: em(992.98)) {
+		text-align: center;
+	}
+}
+
+.animation {
+	aspect-ratio: 1.35 / 1;
+
+	@media (max-width: em(992.98)) {
+		aspect-ratio: 1 / 1;
+	}
+}

@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+#root {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+}
+aside {
+	position: sticky;
+	top: 0;
+	max-height: 100svh;
+	border-radius: rem(0) rem(20) rem(20) rem(0);
+	background-color: var(--secondary-bg-color);
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-block: 3vw;
+}
+main {
+	width: 100%;
+}

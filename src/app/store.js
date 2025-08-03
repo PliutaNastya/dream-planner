@@ -7,7 +7,7 @@ export const store = configureStore({
 		[dreamsApi.reducerPath]: dreamsApi.reducer,
 	},
 	middleware: (getDefaultMiddleware) =>
-		getDefaultMiddleware().concat(dreamsApi.middleware),
+		getDefaultMiddleware({ serializableCheck: false }).concat(dreamsApi.middleware),
 })
 
 export default store

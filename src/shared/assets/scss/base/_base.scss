@@ -3,10 +3,13 @@
 @use "../abstracts/functions" as *;
 @use "../abstracts/extends" as *;
 
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:regular,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=JetBrains+Mono:300,regular,700&display=swap");
 
 body {
-	
+	font-family: "JetBrains Mono", serif;
+	font-size: var(--fz-main);
+	background-color: var(--main-bg-color);
+	color: var(--main-text-color);
 }
 .body--no-scroll {
 	overflow: hidden;

@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/extends" as *;
+
+form {
+	display: grid;
+	row-gap: var(--gap);
+}
+input,
+select,
+textarea {
+	font: inherit;
+	width: 100%;
+	background-color: var(--actions-bg-color);
+	padding: max(14px, 1vw);
+	color: var(--inverse-text-color);
+
+	&::placeholder {
+		color: var(--inverse-opacity-text-color);
+	}
+
+	&.error {
+		outline: rem(3) solid red;
+	}
+}
+select {
+	option {
+		color: var(--inverse-text-color);
+	}
+	&:valid {
+		color: var(--inverse-text-color);
+	}
+	&:invalid {
+		color: var(--inverse-opacity-text-color);
+	}
+}
+textarea {
+	min-height: rem(80);
+	resize: vertical;
+}
+label {
+	display: grid;
+	row-gap: var(--gap);
+}
