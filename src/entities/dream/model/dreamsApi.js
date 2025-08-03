@@ -7,7 +7,7 @@ const db = new DbOperations('dreams')
 export const dreamsApi = createApi({
 	reducerPath: 'dreamsApi',
 	baseQuery: fakeBaseQuery(),
-	tagTypes: 'Dreams',
+	tagTypes: ['Dreams'],
 	keepUnusedDataFor: 0,
 	refetchOnMountOrArgChange: true,
 	endpoints: builder => ({
