@@ -13,7 +13,7 @@ function DreamDetailsCard() {
 			<p><span>Опис:</span> {dream.description}</p>
 			<p><span>Рік, до якого хочу здійснити мрію:</span> {dream.year}</p>
 			<p><span>З ким хочу здійснити мрію:</span> {dream.withWhom}</p>
-			<p><span>Категорія:</span> {dream.description}</p>
+			<p><span>Категорія:</span> {dream.category}</p>
 		</div>
 	)
 }
